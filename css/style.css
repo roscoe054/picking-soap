@@ -1,0 +1,52 @@
+html, body, div {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  height: 100%; }
+
+body {
+  position: relative;
+  background-color: #b0d3d5; }
+
+#handler {
+  position: absolute;
+  width: 3.96667rem;
+  height: 24.18333rem;
+  top: -24.18333rem;
+  left: 50%;
+  margin-left: -1.98333rem; }
+
+.blow-head {
+  position: absolute;
+  height: 27.16667rem;
+  top: -27.16667rem; }
+
+#blow_head_left {
+  left: 25%;
+  margin-left: -0.98333rem; }
+
+#blow_head_right {
+  left: 75%;
+  margin-left: -1.03333rem; }
+
+.person {
+  position: absolute;
+  width: 11.5rem; }
+
+#person_left {
+  top: 50%;
+  left: -11.5rem; }
+
+#person_right {
+  top: 53%;
+  right: -11.5rem; }
+
+#floor {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%; }
+
+/*# sourceMappingURL=style.css.map */

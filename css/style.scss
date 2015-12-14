@@ -1,0 +1,64 @@
+@function calRem($size) {
+    $remSize: $size / 20px / 3;
+    @return #{$remSize}rem;
+}
+
+html, body, div {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    background-color: #b0d3d5;
+}
+
+#handler {
+    position: absolute;
+    width: calRem(238px);
+    height: calRem(1451px);
+    top: calRem(-1451px);
+    left: 50%;
+    margin-left: calRem(-119px);
+}
+
+.blow-head {
+    position: absolute;
+    height: calRem(1630px);
+    top: calRem(-1630px);
+}
+
+#blow_head_left {
+    left: 25%;
+    margin-left: calRem(-59px);
+}
+
+#blow_head_right {
+    left: 75%;
+    margin-left: calRem(-62px);
+}
+
+.person{
+    position: absolute;
+    width: calRem(690px);
+}
+#person_left{
+    top: 50%;
+    left: calRem(-690px);
+}
+#person_right{
+    top: 53%;
+    right: calRem(-690px);
+}
+
+#floor{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
