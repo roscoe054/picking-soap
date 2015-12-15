@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>捡肥皂</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/lib/tweenmax.min.js"></script>
+    <script src="/js/lib/flexible.js"></script>
+</head>
+<body>
+    <img id="floor" src="/image/floor.png" />
+    <img id="blow_head_left"  class="blow-head" src="/image/blow_head_left.png" />
+    <img id="blow_head_right" class="blow-head" src="/image/blow_head_right.png" />
+    <img id="handler" src="/image/handler.png" />
+    <img id="person_left"  class="person" src="/image/person_left.png" />
+    <img id="person_right" class="person" src="/image/person_right.png" />
+
+    <script>
+        var handler = document.getElementById("handler"),
+            blow_head_left = document.getElementById("blow_head_left"),
+            blow_head_right = document.getElementById("blow_head_right")
+
+        TweenLite.to(handler, 1, {top: 0, delay: 1});
+        TweenLite.to(blow_head_left, 1, {top: 0, delay: 2});
+        TweenLite.to(blow_head_right, 1, {top: 0, delay: 2});
+        TweenLite.to(person_left, 1, {left: '3%', delay: 3});
+        TweenLite.to(person_right, 1, {right: '3%', delay: 3});
+    </script>
+</body>
+</html>
