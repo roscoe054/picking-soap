@@ -8,9 +8,20 @@
     <link rel="stylesheet" href="/css/style.css">
     <script src="/js/lib/tweenmax.min.js"></script>
     <script src="/js/lib/flexible.js"></script>
+    <script src="/js/lib/zepto.min.js"></script>
 </head>
 <body>
+    <!-- 背景 -->
     <img id="floor" src="/image/floor.png" />
+
+    <!-- 场景1 -->
+    <div id="cloud_group_left" class="cloud-group">
+        <img class="cloud" src="/image/cloud.png"/>
+        <img class="cloud" src="/image/cloud.png"/>
+        <img class="cloud" src="/image/cloud.png"/>
+    </div>
+
+    <!-- 场景2 -->
     <img id="water_left" class="water" src="/image/water_left.png" />
     <img id="water_right" class="water" src="/image/water_right.png" />
     <img id="blow_head_left"  class="blow-head" src="/image/blow_head.png" />
@@ -20,17 +31,19 @@
     <img id="person_right" class="person" src="/image/person_right.png" />
 
     <script>
-        var handler = document.getElementById("handler"),
-            blow_head_left = document.getElementById("blow_head_left"),
-            blow_head_right = document.getElementById("blow_head_right")
+        $(document).ready(function(){
+            var handler = $("#handler"),
+                blow_head_left = $("#blow_head_left"),
+                blow_head_right = $("#blow_head_right")
 
-        TweenLite.to(handler, 1, {top: 0, delay: 1});
-        TweenLite.to(blow_head_left, 1, {top: 0, delay: 2});
-        TweenLite.to(blow_head_right, 1, {top: 0, delay: 2});
-        TweenLite.to(water_left, 1, {top: 0, delay: 3});
-        TweenLite.to(water_right, 1, {top: 0, delay: 3});
-        TweenLite.to(person_left, 1, {left: '2.5%', delay: 4});
-        TweenLite.to(person_right, 1, {right: '2.5%', delay: 4});
+            TweenLite.to(handler, 1, {top: 0, delay: 1});
+            TweenLite.to(blow_head_left, 1, {top: 0, delay: 2});
+            TweenLite.to(blow_head_right, 1, {top: 0, delay: 2});
+            TweenLite.to(water_left, 1, {top: 0, delay: 3});
+            TweenLite.to(water_right, 1, {top: 0, delay: 3});
+            TweenLite.to(person_left, 1, {left: '2.5%', delay: 4});
+            TweenLite.to(person_right, 1, {right: '2.5%', delay: 4});
+        })
     </script>
 </body>
 </html>
