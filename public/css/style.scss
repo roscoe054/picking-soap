@@ -1,3 +1,5 @@
+$background-color-basic: #b0d3d5;
+
 @function calRem($size) {
     $remSize: $size / 20px / 3;
     @return #{$remSize}rem;
@@ -28,35 +30,57 @@ body {
     margin-left: calRem(-119px);
 }
 
+
+// blow-head
 .blow-head {
     position: absolute;
-    height: calRem(1630px);
-    top: calRem(-1630px);
+    height: calRem(116px);
+    top: calRem(-116px);
+    margin-left: calRem(-58px);
+    background-color: $background-color-basic;
 }
 
 #blow_head_left {
     left: 25%;
-    margin-left: calRem(-59px);
 }
 
 #blow_head_right {
     left: 75%;
-    margin-left: calRem(-62px);
 }
 
+
+// water
+.water{
+    position: absolute;
+    width: calRem(88px);
+    height: calRem(1750px);
+    top: calRem(-1750px);
+    margin-left: calRem(-37px);
+}
+#water_left{
+    left: 25%;
+}
+#water_right{
+    left: 75%;
+}
+
+
+// person
 .person{
     position: absolute;
     width: calRem(690px);
 }
 #person_left{
-    top: 50%;
+    top: calRem(1050px);
     left: calRem(-690px);
 }
 #person_right{
-    top: 53%;
+    top: calRem(1100px);
     right: calRem(-690px);
 }
 
+
+// floor
 #floor{
     position: absolute;
     bottom: 0;

@@ -21,27 +21,40 @@ body {
 
 .blow-head {
   position: absolute;
-  height: 27.16667rem;
-  top: -27.16667rem; }
+  height: 1.93333rem;
+  top: -1.93333rem;
+  margin-left: -0.96667rem;
+  background-color: #b0d3d5; }
 
 #blow_head_left {
-  left: 25%;
-  margin-left: -0.98333rem; }
+  left: 25%; }
 
 #blow_head_right {
-  left: 75%;
-  margin-left: -1.03333rem; }
+  left: 75%; }
+
+.water {
+  position: absolute;
+  width: 1.46667rem;
+  height: 29.16667rem;
+  top: -29.16667rem;
+  margin-left: -0.61667rem; }
+
+#water_left {
+  left: 25%; }
+
+#water_right {
+  left: 75%; }
 
 .person {
   position: absolute;
   width: 11.5rem; }
 
 #person_left {
-  top: 50%;
+  top: 17.5rem;
   left: -11.5rem; }
 
 #person_right {
-  top: 53%;
+  top: 18.33333rem;
   right: -11.5rem; }
 
 #floor {
