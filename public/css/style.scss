@@ -21,6 +21,22 @@ body {
     background-color: #b0d3d5;
 }
 
+.title{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 10;
+    width: calRem(600px);
+    height: calRem(240px);
+    line-height: calRem(240px);
+    margin-left: calRem(-300px);
+    margin-top: calRem(-120px);
+    text-align: center;
+    color: $background-color-basic;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+}
+
 #handler {
     position: absolute;
     width: calRem(238px);
@@ -32,11 +48,24 @@ body {
 
 
 // cloud
-.cloud {
-    width: calRem(743px);
-    height: calRem(421px);
-}
+.cloud-group{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
 
+    .cloud {
+        position: absolute;
+        width: calRem(900px);
+        height: calRem(510px);
+    }
+}
+#cloue_group_left{
+    left: 0;
+}
+#cloue_group_right{
+    right: 0;
+}
 
 // blow-head
 .blow-head {

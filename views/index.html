@@ -15,7 +15,17 @@
     <img id="floor" src="/image/floor.png" />
 
     <!-- 场景1 -->
+    <h1 class="title">捡肥皂</h1>
     <div id="cloud_group_left" class="cloud-group">
+        <img class="cloud" src="/image/cloud.png"/>
+        <img class="cloud" src="/image/cloud.png"/>
+        <img class="cloud" src="/image/cloud.png"/>
+        <img class="cloud" src="/image/cloud.png"/>
+        <img class="cloud" src="/image/cloud.png"/>
+    </div>
+    <div id="cloud_group_right" class="cloud-group">
+        <img class="cloud" src="/image/cloud.png"/>
+        <img class="cloud" src="/image/cloud.png"/>
         <img class="cloud" src="/image/cloud.png"/>
         <img class="cloud" src="/image/cloud.png"/>
         <img class="cloud" src="/image/cloud.png"/>
@@ -32,17 +42,68 @@
 
     <script>
         $(document).ready(function(){
-            var handler = $("#handler"),
-                blow_head_left = $("#blow_head_left"),
-                blow_head_right = $("#blow_head_right")
+            var currentSec = 1
 
-            TweenLite.to(handler, 1, {top: 0, delay: 1});
-            TweenLite.to(blow_head_left, 1, {top: 0, delay: 2});
-            TweenLite.to(blow_head_right, 1, {top: 0, delay: 2});
-            TweenLite.to(water_left, 1, {top: 0, delay: 3});
-            TweenLite.to(water_right, 1, {top: 0, delay: 3});
-            TweenLite.to(person_left, 1, {left: '2.5%', delay: 4});
-            TweenLite.to(person_right, 1, {right: '2.5%', delay: 4});
+            setClouds()
+            removeTitleAndClouds()
+            renderPrelude()
+
+            function setClouds(){
+                var clouds = $(".cloud"),
+                    postions = [
+                        // left
+                        {top: "3%",  left: "0%",  zIndex: "1" },
+                        {top: "33%", left: "-7%", zIndex: "1" },
+                        {top: "17%", left: "19%", zIndex: "1" },
+                        {top: "46%", left: "5%",  zIndex: "1" },
+                        {top: "64%", left: "-1%", zIndex: "1" },
+
+                        // right
+                        {top: "6%",  right: "-10%",  zIndex: "1" },
+                        {top: "41%", right: "-16%", zIndex: "1" },
+                        {top: "27%", right: "-25%", zIndex: "1" },
+                        {top: "56%", right: "-6%",  zIndex: "1" },
+                        {top: "70%", right: "-1%", zIndex: "1" },
+                    ]
+
+                clouds.each(function(i, cloud){
+                    $(cloud).css(postions[i])
+                })
+            }
+
+            function removeTitleAndClouds(){
+                var title = $(".title"),
+                    cloudGroupLeft = $("#cloud_group_left"),
+                    cloudGroupRight = $("#cloud_group_right"),
+                    duration = 1.5
+
+                TweenLite.to(title, duration, {opacity: "0", delay: currentSec})
+                TweenLite.to(cloudGroupLeft, duration, {left: "-100%", delay: currentSec})
+                TweenLite.to(cloudGroupRight, duration, {right: "-100%", delay: currentSec})
+
+                currentSec = currentSec + duration
+            }
+
+            function renderPrelude(){
+                var handler = $("#handler"),
+                    blow_head_left = $("#blow_head_left"),
+                    blow_head_right = $("#blow_head_right")
+
+                TweenLite.to(handler, 1, {top: 0, delay: currentSec})
+                currentSec += 1
+
+                TweenLite.to(blow_head_left, 1, {top: 0, delay: currentSec})
+                TweenLite.to(blow_head_right, 1, {top: 0, delay: currentSec})
+                currentSec += 1
+
+                TweenLite.to(water_left, 1, {top: 0, delay: currentSec})
+                TweenLite.to(water_right, 1, {top: 0, delay: currentSec})
+                currentSec += 1
+
+                TweenLite.to(person_left, 1, {left: '2.5%', delay: currentSec})
+                TweenLite.to(person_right, 1, {right: '2.5%', delay: currentSec})
+                currentSec += 1
+            }
         })
     </script>
 </body>
