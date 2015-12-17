@@ -45,8 +45,10 @@
             var currentSec = 1
 
             setClouds()
-            removeTitleAndClouds()
-            renderPrelude()
+            $(".title").click(function(){
+                removeTitleAndClouds()
+                renderPrelude()
+            })
 
             function setClouds(){
                 var clouds = $(".cloud"),
