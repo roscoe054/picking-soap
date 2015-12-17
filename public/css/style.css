@@ -1,6 +1,7 @@
-html, body, div {
+html, body, div, p, span, img, ul, ol, li {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  -webkit-tap-highlight-color: transparent; }
 
 html, body {
   width: 100%;

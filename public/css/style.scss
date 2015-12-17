@@ -5,9 +5,10 @@ $background-color-basic: #b0d3d5;
     @return #{$remSize}rem;
 }
 
-html, body, div {
+html, body, div, p, span, img, ul, ol, li{
     margin: 0;
     padding: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 html, body {
